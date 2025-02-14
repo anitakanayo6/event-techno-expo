@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event organisers | Tivotal</title>
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <!--css file-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#" class="logo"><span>T</span>ECHSPO</a>
+
+      <nav class="navbar">
+        <a href="#Home">Home</a>
+        <a href="#About">About</a>
+        <a href="#Services">Services</a>
+        <a href="#Gallery">Gallery</a>
+        <a href="#Review">Review</a>
+        <a href="#Contact">Contact</a>
+        <a href="event-details.html">Event Details</a>
+      </nav>
+
+      <div id="menu-bar" class="fas fa-bars"></div>
+    </header>
+
+    <!-- Home Section Starts -->
+    <section class="Home" id="Home">
+      <div class="content">
+        <h3>
+          Where your Techworld takes off 
+          <span> TECHSPO festivals</span>
+        </h3>
+        <a href="register.html" class="register-btn">Passes are limited - Register Now</a>
+      </div>
+      <img src="images/image7.jpg" alt="Event Image" class="home-image" />
+    </section>
+
+    <!-- Services Section -->
+    <section class="Services" id="Services">
+      <h1 class="heading">Our <span>Services</span></h1>
+      <div class="box-container">
+        <!-- Service Boxes -->
+        <div class="box">
+          <i class="fas fa-envelope"></i>
+          <h3>Invitation Card Design</h3>
+          <p>Custom-designed invitations set the tone for the festival and ensure a memorable first impression.</p>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-photo-video"></i>
+          <h3>Photos and Videos</h3>
+          <p>Professional photographers and videographers capture every key moment of the festival.</p>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-music"></i>
+          <h3>Entertainment</h3>
+          <p>Engaging performances and interactive experiences for an exciting atmosphere.</p>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-car"></i>
+          <h3>Event Vehicles</h3>
+          <p>Modern, eco-friendly transportation options for a seamless festival experience.</p>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Venue Selection</h3>
+          <p>A spacious and innovative venue designed to enhance your festival experience.</p>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-birthday-cake"></i>
+          <h3>Food Catering</h3>
+          <p>A variety of delicious meals and snacks prepared and served throughout the festival.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="About" id="About">
+      <h1 class="heading"><span>About</span> Us</h1>
+      <div class="row">
+        <div class="image">
+          <img src="images/image7.jpg" alt="Image 7" />
+        </div>
+        <div class="content">
+          <h3>Our tech festivals are built on innovative planning and flawless execution.</h3>
+          <p>At TECHSPO, we focus on delivering a seamless and exciting experience for every attendee.</p>
+          <p>
+            Expect fun activities, exciting games, and the chance to explore the latest tech innovations.
+            Dive into hands-on experiences and discover cutting-edge products. It's an event where learning meets excitement!
+          </p>
+          <a href="#" class="btn">Reach Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="Gallery" id="Gallery">
+      <h1 class="heading">Our <span>Gallery</span></h1>
+      <div class="box-container">
+        <!-- Image Boxes -->
+        <div class="box">
+          <img src="images/image1.png" alt="Exciting Tech Moments" />
+          <h3 class="title">Exciting Tech Moments</h3>
+          <div class="icons">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-share"></a>
+            <a href="#" class="fas fa-eye"></a>
+          </div>
+        </div>
+        <!-- Add more images here -->
+      </div>
+    </section>
+
+    <!-- Review Section -->
+    <section class="Review-container" id="Review">
+      <div class="container">
+        <h1>Customer Reviews and Survey</h1>
+        <!-- Review Form -->
+        <div class="review-form">
+            <h2>Leave a Review</h2>
+            <form id="reviewForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+               
+                <label for="rating">Rating:</label>
+                <select id="rating" name="rating" required>
+                    <option value="5">5 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="2">2 Stars</option>
+                    <option value="1">1 Star</option>
+                </select>
+               
+                <label for="comment">Comment:</label>
+                <textarea id="comment" name="comment" rows="4" required></textarea>
+               
+                <button type="submit">Submit Review</button>
+            </form>
+        </div>
+
+        <!-- Survey Form -->
+        <div class="survey-form">
+            <h2>Customer Survey</h2>
+            <form id="surveyForm">
+                <label for="experience">How would you rate your overall experience?</label>
+                <select id="experience" name="experience" required>
+                    <option value="5">Excellent</option>
+                    <option value="4">Good</option>
+                    <option value="3">Average</option>
+                    <option value="2">Poor</option>
+                    <option value="1">Very Poor</option>
+                </select>
+
+                <label for="feedback">Any additional feedback?</label>
+                <textarea id="feedback" name="feedback" rows="4"></textarea>
+
+                <button type="submit">Submit Survey</button>
+            </form>
+        </div>
+       
+        <!-- Reviews Display -->
+        <div class="reviews-display">
+            <h2>Recent Reviews</h2>
+            <div id="reviewsList"></div>
+        </div>
+
+        <!-- Survey Results Display -->
+        <div class="survey-results">
+            <h2>Survey Results</h2>
+            <div id="surveyResults"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Event Details Link Section -->
+    <section class="event-details-link">
+      <h2>Want to know more about the event?</h2>
+      <p>Get all the details about TECHSPO, including the full schedule, speakers, and more!</p>
+      <a href="event-details.html" class="btn">View Event Details</a>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+      <h2>Watch livestream from TECHSPO</h2>
+      <iframe
+        src="https://www.youtube.com/embed/z5tG3rV-xyY"
+        title="TECHSPO Highlights"
+        width="560"
+        height="315"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </section>
+
+    <!-- Contact Section -->
+    <div class="contact-container" id="Contact">
+      <h2>Contact Us</h2>
+      <div class="contact-info">
+        <p><strong>Phone:</strong> 021 358 7784</p>
+        <p><strong>Email:</strong> <a href="mailto:Techspofestive@gmail.com">Techspofestive@gmail.com</a></p>
+      </div>
+  
+      <div class="message-form">
+        <h3>Send Us A Message</h3>
+        <form action="mailto:Techspofestive@gmail.com" method="POST" enctype="text/plain">
+          <textarea name="message" placeholder="Your message here..." required></textarea><br>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Social Media Section -->
+    <section class="socials" id="socials">
+      <h1 class="heading">Follow us on <span>Social Media</span></h1>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/techspo" target="_blank" class="fab fa-facebook-f"></a>
+        <a href="https://www.instagram.com/techspo" target="_blank" class="fab fa-instagram"></a>
+        <a href="https://www.linkedin.com/company/techspo" target="_blank" class="fab fa-linkedin-in"></a>
+      </div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper('.Home-slider', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        loop: true
+      });
+
+      var swiperReviews = new Swiper('.reviews-carousel', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        loop: true
+      });
+    </script>
+
+    
+    <script>
+      const menuBar = document.getElementById('menu-bar');
+      const navbar = document.querySelector('.navbar');
+      const logo = document.querySelector('.logo');
+
+      menuBar.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+        logo.classList.toggle('hide');
+      });
+    </script>  
+<!-- Review Success Message -->
+<div id="reviewSuccessMessage" style="display:none; color: green;">
+  Thank you for your review! We appreciate your feedback.
+</div>
+
+<!-- Survey Success Message -->
+<div id="surveySuccessMessage" style="display:none; color: green;">
+  Thank you for your survey submission! Your feedback is valuable to us.
+</div>
+
+  <!-- Review Success Message -->
+<div id="reviewSuccessMessage" style="display:none; color: green;">
+    Thank you for your review! We appreciate your feedback.
+</div>
+
+<!-- Review Form -->
+<form id="reviewForm">
+    <!-- Form fields here -->
+    <button type="submit">Submit Review</button>
+</form>
+
+<!-- Survey Success Message -->
+<div id="surveySuccessMessage" style="display:none; color: green;">
+    Thank you for your survey submission! Your feedback is valuable to us.
+</div>
+
+<!-- Survey Form -->
+<form id="surveyForm">
+    <!-- Form fields here -->
+    <button type="submit">Submit Survey</button>
+</form>
+
+<script>
+    // Review Form Submission
+    document.getElementById("reviewForm").addEventListener("submit", function(event) {
+        event.preventDefault(); 
+        document.getElementById("reviewSuccessMessage").style.display = "block";
+        document.getElementById("reviewForm").reset();
+    });
+
+    // Survey Form Submission
+    document.getElementById("surveyForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        document.getElementById("surveySuccessMessage").style.display = "block";
+        document.getElementById("surveyForm").reset();
+    });
+</script>
+
+</script>
+  </body>
+</html>
